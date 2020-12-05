@@ -1,0 +1,65 @@
+@import '@/styles/_vars.scss';
+
+@mixin d-flex {
+	display: flex;
+	align-items: center;
+}
+
+@mixin d-flex-end {
+	@include d-flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+@mixin d-flex-start {
+	@include d-flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+@mixin d-flex-center {
+	@include d-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin p-layout {
+	padding: 1em 2em;
+}
+
+@mixin custom-link {
+  text-decoration: none;
+	transition: color 0.3s;
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: -0.4em;
+		left: 5%;
+		width: 0;
+		height: 2px;
+		background: linear-gradient(to right, $secondary, $secondaryHover);
+		transition: all 0.3s;
+	}
+
+	&:hover {
+		color: $primaryHover;
+
+		&:before {
+			width: 85%;
+		}
+	}
+}
+
+@mixin desktop-only {
+	@media (min-width: $desktopSize) {
+		@content;
+	}
+}
+
+@mixin mobile-only {
+	@media (max-width: $mobileSize) {
+		@content;
+	}
+}

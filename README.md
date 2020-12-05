@@ -1,4 +1,4 @@
-# clicker-hero
+# Clicker Hero
 
 ## Project setup
 ```

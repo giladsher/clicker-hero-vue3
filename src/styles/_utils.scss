@@ -1,0 +1,17 @@
+@import '@/styles/_vars';
+@import '@/styles/_mixins';
+
+.container {
+  margin: 0 auto;
+  padding: 0 1em;
+  max-width: 1600px;
+  width: 100%;
+
+  &-small {
+    max-width: 1024px;
+  }
+
+  @include mobile-only {
+    padding: 0;
+  }
+}

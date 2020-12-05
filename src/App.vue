@@ -1,30 +1,39 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
+  <Navbar />
+  <main id="main">
+    <router-view />
+  </main>
+  <Footer />
+  <SvgSprites />
 </template>
 
+<script lang="ts">
+import { defineComponent } from 'vue'
+import Navbar from '@/components/layout/Navbar.vue';
+import Footer from '@/components/layout/Footer.vue';
+import SvgSprites from '@/components/layout/SvgSprites.vue';
+
+export default defineComponent({
+  name: 'App',
+  components: { Navbar, Footer, SvgSprites }
+});
+</script>
+
 <style lang="scss">
+@import '@/styles/site.scss';
+
 #app {
+  @include d-flex-start;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  flex-direction: column;
+  height: 100vh;
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  #main {
+    @include p-layout;
+    width: 100%;
+    flex: 1;
   }
 }
 </style>
