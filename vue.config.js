@@ -6,6 +6,5 @@ module.exports = {
         prependData: `@import "@/styles/_vars.scss";\n@import "@/styles/_mixins.scss";\n@import "@/styles/_utils.scss";`
       }
     }
-  },
-  publicPath: 'https://google.com'
+  }
 }

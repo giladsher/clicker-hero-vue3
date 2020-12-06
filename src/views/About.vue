@@ -105,7 +105,7 @@
 
 	export default defineComponent({
 		name: 'About',
-		data() {
+		setup() {
 			return {
 				emailTemplate,
 				emailAddress

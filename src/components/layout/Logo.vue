@@ -21,6 +21,10 @@
       color: $primary;
       transition: color .3s;
 
+      &:before {
+        content: none;
+      }
+
       &:hover {
         color: $primaryHover;
       }

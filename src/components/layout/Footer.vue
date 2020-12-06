@@ -19,7 +19,7 @@ const currentYear = new Date().getFullYear();
 export default defineComponent({
   name: 'Footer',
   components: { Logo },
-  data() {
+  setup() {
     return {
       currentYear
     };

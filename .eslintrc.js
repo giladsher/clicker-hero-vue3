@@ -19,5 +19,7 @@ module.exports = {
 		quotes: [2, 'single'],
 		'comma-dangle': ['error', 'never'],
 		'prettier/prettier': 0,
+		'no-use-before-define': ['error', {'functions': false}],
+		'no-non-null-assertion': 0
 	},
 };
